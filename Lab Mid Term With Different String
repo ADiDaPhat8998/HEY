@@ -1,0 +1,50 @@
+import java.util.Scanner;
+class main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("What three programming language are taught in CSE 1321L?");
+        System.out.println("* C#");
+        System.out.println("* A#");
+        System.out.println("* Javascript");
+        System.out.println("* C++");
+        System.out.println("* Java");
+        System.out.println("* Python");
+        System.out.print("What is your answer: ");
+        String ans1 = sc.next();
+
+        if (ans1.equals(".")){
+            System.out.println("Correct");
+        }
+        else {
+            System.out.println("Incorrect");
+        }
+
+        System.out.println("What is the name of the bi-annual student showcase for CCSE?");
+        System.out.println("* C-Day");
+        System.out.println("* D-Day");
+        System.out.println("* Programming Day");
+        System.out.println("* lol");
+        System.out.print("What is your answer: ");
+        String ans2 = sc.next();
+
+        if (ans2.equals("C-Day")){
+            System.out.println("Correct");
+        }
+        else {
+            System.out.println("Incorrect");
+        }
+
+
+        if (ans1.equals(".") && ans2.equals("C-Day")){
+            System.out.println("Score 2/2");
+        }
+        else if ((!ans1.equals(".") && ans2.equals("C-Day")) || (ans1.equals(".") && !ans2.equals("C-Day"))){
+            System.out.println("Score 1/2");
+        }
+        else if (!ans1.equals(".") && !ans2.equals("C-Day")){
+            System.out.println("Score 0/2");
+        }
+
+    }
+}
